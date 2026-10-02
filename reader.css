@@ -1,0 +1,43 @@
+/* Reading layout. Detailed explanations remain available on demand. */
+:root[data-theme="light"]{--bg:#f5f6fa;--paper:#fff;--ink:#202635;--ink2:#596477;--line:#e0e5ef;--navy:#253788;--accent:#4158b5;--soft:#eef1fc;color-scheme:light}
+.top{padding:22px 24px;background:var(--paper);color:var(--ink);border-bottom:1px solid var(--line)}
+.top .in{max-width:1120px;gap:10px}.top .k{color:var(--accent)}.top h1{font-size:clamp(24px,3vw,32px)}
+.top p{color:var(--ink2);max-width:76ch;font-size:14px}.prog{max-width:480px}.prog .b{background:var(--line);border-radius:6px}.prog .b i{background:var(--accent);border-radius:6px}.prog span{color:var(--ink2);font:12px var(--sans)}
+.wrap{max-width:1170px;grid-template-columns:235px minmax(0,1fr);gap:36px;padding-top:28px}
+.idx{border-radius:12px;overflow:auto;max-height:calc(100dvh - 40px);border-color:var(--line)}
+.idx a{font-size:13px;padding:10px 12px}.idx a[aria-current="true"]{background:var(--soft);color:var(--ink);box-shadow:inset 3px 0 var(--accent)}
+.idx a[aria-current="true"] .ok{color:var(--ok)}.idx .grp{padding:16px 12px 8px;font:600 10px/1.5 var(--sans);letter-spacing:.05em}
+.mod{gap:20px}.mod>header{gap:10px}.mod h2{font-size:clamp(25px,3vw,32px);max-width:26ch}.lede{font-size:15px;line-height:1.65;max-width:65ch}
+.reading-tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:24px}
+.reading-tools button,.reading-tools select,.study-actions button,.study-download,.lesson-tabs button{font:500 13px var(--sans);border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--ink);padding:9px 12px;cursor:pointer}
+.reading-tools label{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink2)}
+.reading-tools .theme-toggle{margin-left:auto}.reading-status{font-size:12px;color:var(--ink2);flex-basis:100%;min-height:18px}
+.lesson-tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.lesson-tabs button{border-color:transparent;background:transparent;padding:10px 14px}.lesson-tabs button[aria-selected="true"]{color:var(--accent);background:var(--soft);font-weight:700}
+.lesson-pane{display:flex;flex-direction:column;gap:20px;min-width:0}.lesson-pane>p{color:var(--ink2);line-height:1.65}
+.lesson-explainer{padding:0;background:transparent;border:0;gap:12px}.lesson-explainer>h3{font-size:16px;color:var(--ink2);margin:0 0 2px}
+.reading-step{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.reading-step summary{cursor:pointer;padding:17px 20px;list-style:none;display:flex;gap:14px;align-items:flex-start;line-height:1.6}
+.reading-step summary::-webkit-details-marker{display:none}.reading-step summary::after{content:'+';margin-left:auto;color:var(--accent);font-size:20px;flex:none}
+.reading-step[open] summary::after{content:'−'}.step-number{width:26px;height:26px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--soft);color:var(--accent);font:600 12px var(--sans)}
+.step-preview{max-width:65ch;font-size:15px}.step-preview b{display:block;font-size:11px;font-weight:600;letter-spacing:.05em;color:var(--ink2);margin-bottom:4px;text-transform:uppercase}
+.reading-step>p{padding:0 20px 20px 60px;font-size:15px;line-height:1.75;max-width:72ch}
+.reading-reference,.lesson-terms,.study-notes{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:16px 20px}
+.reading-reference>summary,.lesson-terms>summary,.study-notes>summary{cursor:pointer;font:600 14px/1.5 var(--sans)}
+.reference-body{display:flex;flex-direction:column;gap:18px;padding-top:22px;min-width:0}.reference-body h3{margin-top:8px}
+.exercise-guide{border:0;border-radius:8px;padding:14px 16px;font-size:14px}.exercise-guide b{font-size:13px}
+.calc,.pack,.race,.mig,.fail,.stackx,.quiz,.card,.ask,.core,.ans{border-radius:10px}.quiz{border-top:1px solid var(--line);padding:22px;gap:22px}
+.quiz-guidance{font-size:14px}.q{gap:12px}.opts{gap:8px}.opts button{border-radius:7px;padding:12px 14px}.why{line-height:1.7;padding:10px 14px;background:var(--soft);border-radius:0 7px 7px 0}
+.lesson-pane>.pane-next{align-self:flex-start;border-radius:7px;margin-top:6px}
+.study-notes[open]>summary{margin-bottom:16px}.study-notes p{font-size:13px;color:var(--ink2);line-height:1.6;margin:10px 0}
+.study-notes label{display:block;font-size:14px;font-weight:600;margin-bottom:8px}.study-notes textarea{width:100%;min-height:110px;resize:vertical;font:14px/1.7 var(--sans);background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:12px;box-sizing:border-box}
+.study-save-status{font-size:12px;color:var(--ink2);min-height:18px}.study-highlights{list-style:none;padding:0;margin:12px 0;display:grid;gap:10px}
+.study-highlights li{display:flex;gap:12px;align-items:flex-start;font-size:13px;line-height:1.6;border-top:1px solid var(--line);padding-top:10px}.study-highlights li span{flex:1;white-space:pre-wrap;overflow-wrap:anywhere}
+.study-highlights button{background:transparent;border:1px solid var(--line);border-radius:6px;color:var(--ink2);padding:6px 8px;cursor:pointer;font:12px var(--sans)}
+mark.study-mark{color:#202020;padding:1px 0;border-radius:2px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+mark.study-yellow{background:#ffe7a0}mark.study-green{background:#bfe9d0}mark.study-blue{background:#c7ddff}
+.selection-highlighter{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:100;background:var(--navy);color:#fff;border:0;border-radius:24px;padding:12px 22px;font:600 14px var(--sans);box-shadow:0 4px 24px #0003;cursor:pointer}
+.course-index-toggle{display:none}
+.pn .btn{border-radius:7px;font-size:13px}.body{gap:20px}
+@media(max-width:860px){.wrap{grid-template-columns:1fr;padding:20px 16px 40px;gap:20px}.idx{position:static;flex-direction:column;max-height:190px}.idx .grp{padding:10px 12px 6px}.idx a{display:grid;min-width:0;border-right:0;border-bottom:1px solid var(--line)}.reading-tools{margin-bottom:20px}.top{padding:20px 16px}.lesson-tabs button{flex:1;padding:10px 6px}.reading-step summary{padding:14px;gap:10px}.reading-step>p{padding:0 14px 18px 50px}.reading-reference,.lesson-terms,.study-notes{padding:14px}.reading-tools .theme-toggle{margin-left:0}.quiz{padding:16px}}
+@media(max-width:860px){.course-index-toggle{display:block;position:sticky;top:0;z-index:2;text-align:left;flex:none;width:100%;height:52px;padding:14px;border:0;background:var(--paper);color:var(--ink);font:600 14px var(--sans);cursor:pointer}.idx[data-mobile-open="false"]{max-height:52px;overflow:hidden}.idx[data-mobile-open="false"]>*:not(.course-index-toggle){display:none}.idx[data-mobile-open="true"]{max-height:300px}}
