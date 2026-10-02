@@ -35,9 +35,31 @@
 .study-highlights li{display:flex;gap:12px;align-items:flex-start;font-size:13px;line-height:1.6;border-top:1px solid var(--line);padding-top:10px}.study-highlights li span{flex:1;white-space:pre-wrap;overflow-wrap:anywhere}
 .study-highlights button{background:transparent;border:1px solid var(--line);border-radius:6px;color:var(--ink2);padding:6px 8px;cursor:pointer;font:12px var(--sans)}
 mark.study-mark{color:#202020;padding:1px 0;border-radius:2px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-mark.study-yellow{background:#ffe7a0}mark.study-green{background:#bfe9d0}mark.study-blue{background:#c7ddff}
+mark.study-yellow{background:#ffe7a0}
 .selection-highlighter{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:100;background:var(--navy);color:#fff;border:0;border-radius:24px;padding:12px 22px;font:600 14px var(--sans);box-shadow:0 4px 24px #0003;cursor:pointer}
 .course-index-toggle{display:none}
 .pn .btn{border-radius:7px;font-size:13px}.body{gap:20px}
 @media(max-width:860px){.wrap{grid-template-columns:1fr;padding:20px 16px 40px;gap:20px}.idx{position:static;flex-direction:column;max-height:190px}.idx .grp{padding:10px 12px 6px}.idx a{display:grid;min-width:0;border-right:0;border-bottom:1px solid var(--line)}.reading-tools{margin-bottom:20px}.top{padding:20px 16px}.lesson-tabs button{flex:1;padding:10px 6px}.reading-step summary{padding:14px;gap:10px}.reading-step>p{padding:0 14px 18px 50px}.reading-reference,.lesson-terms,.study-notes{padding:14px}.reading-tools .theme-toggle{margin-left:0}.quiz{padding:16px}}
 @media(max-width:860px){.course-index-toggle{display:block;position:sticky;top:0;z-index:2;text-align:left;flex:none;width:100%;height:52px;padding:14px;border:0;background:var(--paper);color:var(--ink);font:600 14px var(--sans);cursor:pointer}.idx[data-mobile-open="false"]{max-height:52px;overflow:hidden}.idx[data-mobile-open="false"]>*:not(.course-index-toggle){display:none}.idx[data-mobile-open="true"]{max-height:300px}}
+
+/* Quiet learning aids and a highlighter that stays within reach. */
+body{padding-bottom:90px}.study-dock{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:4px;padding:6px;max-width:calc(100vw - 24px);border:1px solid var(--line);border-radius:14px;background:var(--paper);box-shadow:0 6px 30px #0002;z-index:100}
+.study-dock button{border:0;border-radius:9px;padding:11px 14px;background:transparent;color:var(--ink2);font:600 13px var(--sans);white-space:nowrap;cursor:pointer}
+.study-dock .highlight-mode[aria-pressed="true"]{color:#392c00;background:#ffe7a0}.highlight-mode::before{content:'✎';font-size:17px;margin-right:6px}
+.highlighter-active .lesson-pane{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Cpath d='M8 17L18 3l6 5-11 13z' fill='%23ffe7a0' stroke='%23624c00'/%3E%3Cpath d='M8 17l-3 7 8-3' fill='%23624c00'/%3E%3C/svg%3E") 5 24,text}
+.study-mark{cursor:pointer}.study-mark:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.selection-highlighter{bottom:86px}.study-toast{position:fixed;bottom:86px;right:18px;display:flex;gap:12px;align-items:center;max-width:430px;padding:13px 16px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);box-shadow:0 5px 24px #0002;font:13px/1.6 var(--sans);z-index:105}
+.study-toast button{border:0;background:var(--soft);color:var(--accent);border-radius:6px;padding:8px;cursor:pointer;font:600 13px var(--sans)}
+.beginner-tip{align-self:flex-start;color:var(--ink2);margin:2px 0}.beginner-tip summary{cursor:pointer;font-size:12px;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px}
+.beginner-tip>p{font-size:14px;line-height:1.75;max-width:65ch;padding:12px 0;margin:0}.continue-reading{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.study-dialog{width:min(720px,calc(100vw - 28px));max-height:85dvh;padding:0;border:1px solid var(--line);border-radius:14px;background:var(--paper);color:var(--ink);box-shadow:0 20px 70px #0004}
+.study-dialog::backdrop{background:#10182777}.study-dialog-heading{display:flex;justify-content:space-between;gap:18px;align-items:center;position:sticky;top:0;padding:18px 22px;border-bottom:1px solid var(--line);background:var(--paper);z-index:1}
+.study-dialog-heading h2{font-size:22px;line-height:1.3}.study-dialog button{font:500 13px var(--sans);border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--ink);padding:9px 12px;cursor:pointer}
+.study-dialog-body{padding:22px;line-height:1.7}.study-dialog-body p{margin:0 0 14px}.study-description{font-size:14px;color:var(--ink2)}
+.study-dialog textarea{width:100%;min-height:130px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);padding:12px;resize:vertical;font:15px/1.7 var(--sans);box-sizing:border-box;margin:10px 0}.study-dialog label{font-size:14px;font-weight:600}
+.study-highlights .highlight-card{display:block;padding:16px 0;white-space:normal}.highlight-source{font-size:12px!important;color:var(--ink2);line-height:1.6!important;margin:0 0 10px!important;overflow-wrap:anywhere}
+.highlight-card blockquote,.study-dialog blockquote{margin:0 0 16px;border-left:3px solid #e6c05b;padding:5px 0 5px 14px;font-size:15px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere}
+.highlight-note{color:var(--ink2);white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px!important}.study-actions{display:flex;gap:8px;flex-wrap:wrap}.summary-lesson{margin:26px 0}.summary-lesson h3{font-size:17px;line-height:1.5}
+.review-progress{font:12px var(--mono);color:var(--ink2)}.study-dialog .review-quote{font-size:20px;line-height:1.7;margin:22px 0 28px}.study-source-focus{outline:2px solid var(--accent);outline-offset:6px;border-radius:3px}
+@media(max-width:600px){.study-dock{bottom:12px;width:max-content;max-width:calc(100vw - 16px)}.study-dock button{font-size:12px;padding:10px 9px}.study-toast{left:12px;right:12px;max-width:none;bottom:78px}.study-dialog-heading,.study-dialog-body{padding:16px}.study-dialog-heading h2{font-size:19px}.reading-tools{gap:6px}.reading-tools button{font-size:12px;padding:8px 10px}.study-dialog .review-quote{font-size:18px}.selection-highlighter{bottom:82px}}
+@media(max-width:380px){.study-dock button{white-space:normal;line-height:1.3}}
